@@ -6,7 +6,8 @@ Converts Azeribaijani and Russian characters in post/page slugs to Latin charact
 максим - maksim (after)
 
 
-
 əhməd - %c9%99hm%c9%99d (before)
 
 əhməd - ehmed (after)
+
+Rewritten and inspired from Az to Lat and Cyr to Lat Wordpress plugins
