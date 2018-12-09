@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: AzRuToLatin
-Plugin URI: 
+Plugin URI: https://github.com/muradmustafayev/WP-AzRuToLatin
 Description: Converts Azerbaijani and Russian characters in post slugs to Latin characters. Very useful for Azerbaijani-Russian speaking users of WordPress.
 Author: Murad Mustafayev
 Contributor: Murad Mustafayev
