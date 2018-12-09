@@ -1,6 +1,8 @@
 ﻿# WP-AzRuToLatin
 Converts Azeribaijani and Russian characters in post/page slugs to Latin characters
 
+Tested up to: Wordpress v5.0
+
 максим - %d0%bc%d0%b0%d0%ba%d1%81%d0%b8%d0%bc (before)
 
 максим - maksim (after)
