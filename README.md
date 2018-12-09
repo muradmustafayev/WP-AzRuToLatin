@@ -1,5 +1,5 @@
 ﻿# WP-AzRuToLatin
-Converts Azeribaijani and Russian characters in post/page slugs to Latin characters
+Converts Azerbaijani and Russian characters in post/page slugs to Latin characters
 
 Tested up to: Wordpress v5.0
 
