@@ -19,7 +19,6 @@ class MMAzRuToLat {
   
 	public function transliterate($title, $ignore_special_symbols = false)
 	{
-		$origin_title = $title;
 		$iso9_table = $this->getSymbols();
 		
 		$title = strtr($title, $iso9_table);
@@ -44,8 +43,6 @@ class MMAzRuToLat {
 	public function sanitizeTitle($title)
 	{
 		global $wpdb;
-
-		$origin_title = $title;
 
 		$is_term = false;
 		$backtrace = debug_backtrace();
