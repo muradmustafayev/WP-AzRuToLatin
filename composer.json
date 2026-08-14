@@ -1,0 +1,34 @@
+{
+	"name": "muradmustafayev/wpmm-azrutolatin",
+	"description": "Converts Azerbaijani and Russian characters in WordPress slugs to Latin characters.",
+	"type": "wordpress-plugin",
+	"license": "GPL-2.0-or-later",
+	"require": {
+		"php": ">=7.4"
+	},
+	"require-dev": {
+		"phpunit/phpunit": "^9.6",
+		"wp-coding-standards/wpcs": "^3.0",
+		"dealerdirect/phpcodesniffer-composer-installer": "^1.0"
+	},
+	"autoload": {
+		"psr-4": {
+			"Wpmm\\AzRuToLatin\\": "src/"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"Wpmm\\AzRuToLatin\\Tests\\": "tests/"
+		}
+	},
+	"scripts": {
+		"test": "phpunit",
+		"phpcs": "phpcs",
+		"phpcbf": "phpcbf"
+	},
+	"config": {
+		"allow-plugins": {
+			"dealerdirect/phpcodesniffer-composer-installer": true
+		}
+	}
+}
