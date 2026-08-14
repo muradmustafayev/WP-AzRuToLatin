@@ -25,16 +25,16 @@ if ( is_readable( __DIR__ . '/vendor/autoload.php' ) ) {
 	require_once __DIR__ . '/vendor/autoload.php';
 } else {
 	spl_autoload_register(
-		function ( $class ) {
+		function ( $class_name ) {
 			$prefix   = 'Wpmm\\AzRuToLatin\\';
 			$base_dir = plugin_dir_path( WPMM_AZRUTOLATIN_FILE ) . 'src/';
 			$len      = strlen( $prefix );
 
-			if ( strncmp( $prefix, $class, $len ) !== 0 ) {
+			if ( strncmp( $prefix, $class_name, $len ) !== 0 ) {
 				return;
 			}
 
-			$relative_class = substr( $class, $len );
+			$relative_class = substr( $class_name, $len );
 			$file           = $base_dir . str_replace( '\\', '/', $relative_class ) . '.php';
 
 			if ( file_exists( $file ) ) {

@@ -6,3 +6,5 @@
 .DS_Store
 /languages/*.mo
 /languages/*.po~
+.phpunit.result.cache
+/modernization-plan.md

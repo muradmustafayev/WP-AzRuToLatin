@@ -12,4 +12,9 @@
 	<exclude-pattern>*.js</exclude-pattern>
 
 	<rule ref="WordPress-Extra"/>
+
+	<!-- Allow PSR-4 class file names in src. -->
+	<rule ref="WordPress.Files.FileName">
+		<exclude-pattern>src/*</exclude-pattern>
+	</rule>
 </ruleset>
