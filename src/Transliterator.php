@@ -164,6 +164,15 @@ class Transliterator {
 	}
 
 	/**
+	 * Get the current transliteration table.
+	 *
+	 * @return array Transliteration table.
+	 */
+	public function get_table(): array {
+		return $this->table;
+	}
+
+	/**
 	 * Normalize the input to composed Unicode form.
 	 *
 	 * This helps the transliteration table match pre-composed characters
