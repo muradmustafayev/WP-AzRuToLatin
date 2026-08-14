@@ -1,28 +1,40 @@
-﻿=== Az-Ru-To-Latin ===
+=== wpMM-AzRuToLatin ===
 Contributors: Murad Mustafayev
-Tags: translations, slugs, azeri, aztolat, tolatin, aztolatin, cyrtolat, cyrillictolatin
-Requires at least: 1.5
-Tested up to: 5.0
-Stable tag: 1.0
+Tags: transliteration, slugs, azerbaijani, russian, latin, cyrillic
+Requires at least: 6.6
+Requires PHP: 7.4
+Tested up to: 6.6
+Stable tag: 2.0.0
+License: GPLv2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-This plugin converts Azeri and Russian character in post slugs to Latin characters.
+Converts Azerbaijani and Russian characters in WordPress slugs and file names to Latin characters.
 
 == Description ==
 
-** Rewritten and inspired from [Az-To-Lat](https://wordpress.org/plugins/aztolat/) and [Cyr to Lat](https://wordpress.org/plugins/cyr2lat/)**
+wpMM-AzRuToLatin automatically transliterates Azerbaijani (Latin script) and Russian (Cyrillic script) characters used in post, page, term and media slugs into URL-safe Latin characters.
 
-* Converts Azerbaijani and Russian characters in post slugs to Latin characters. Very useful for Azerbaijani-Russian speaking users of WordPress.
+This is useful for Azerbaijani-Russian bilingual WordPress sites, SEO-friendly URLs, and clean file names.
 
-*(Aydin's notes) The original author of this plugin is Anton Skorobogatov, who passed away prematurely in 2007. I decided to make it available for installation through the Plugin Browser/Installer. I take no credit for the creation of this plugin.*
+= Features =
 
-Thanks to Aydin Cavadli for the idea.
+* PSR-4 namespaced architecture.
+* WordPress-standard `sanitize_title` and `sanitize_file_name` hooks.
+* Configurable transliteration table via the `wpmm_azrutolatin_transliteration_table` filter.
+* Per-context on/off switch via the `wpmm_azrutolatin_should_transliterate` filter.
 
 == Installation ==
 
-1. Upload `aztolat` folder to the `/wp-content/plugins/` directory.
-2. Activate the plugin through the 'Plugins' menu in WordPress.
+1. Upload the `wpmm-azrutolatin` folder to `/wp-content/plugins/`.
+2. Activate the plugin through the **Plugins** menu in WordPress.
 
 == Changelog ==
 
+= 2.0.0 =
+* Complete rewrite using modern WordPress and PHP standards.
+* PSR-4 autoloading, namespaced classes, and composer support.
+* New `Transliterator` and `Sanitizer` classes.
+* Exposes `wpmm_azrutolatin_transliteration_table` and `wpmm_azrutolatin_should_transliterate` filters.
+
 = 1.0 =
-* Initial release
+* Initial release.
