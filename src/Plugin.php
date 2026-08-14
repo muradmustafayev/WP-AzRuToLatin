@@ -67,7 +67,23 @@ class Plugin {
 	 * Initialize the plugin.
 	 */
 	public function init() {
-		// Filters will be registered in the next commit.
+		add_filter(
+			'sanitize_title',
+			function ( $title, $raw_title, $context ) {
+				return $this->sanitizer->slug( $title, $context );
+			},
+			9,
+			3
+		);
+
+		add_filter(
+			'sanitize_file_name',
+			function ( $filename ) {
+				return $this->sanitizer->file_name( $filename );
+			},
+			10,
+			1
+		);
 	}
 
 	/**
