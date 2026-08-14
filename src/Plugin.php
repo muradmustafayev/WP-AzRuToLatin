@@ -24,10 +24,29 @@ class Plugin {
 	private static $instance = null;
 
 	/**
+	 * Transliterator instance.
+	 *
+	 * @var Transliterator
+	 */
+	private $transliterator;
+
+	/**
+	 * Sanitizer instance.
+	 *
+	 * @var Sanitizer
+	 */
+	private $sanitizer;
+
+	/**
 	 * Constructor.
 	 */
 	private function __construct() {
 		$this->load_textdomain();
+
+		$table = ( function_exists( 'apply_filters' ) ) ? apply_filters( 'wpmm_azrutolatin_transliteration_table', Transliterator::default_table() ) : Transliterator::default_table();
+
+		$this->transliterator = new Transliterator( $table );
+		$this->sanitizer      = new Sanitizer( $this->transliterator );
 	}
 
 	/**
@@ -48,7 +67,7 @@ class Plugin {
 	 * Initialize the plugin.
 	 */
 	public function init() {
-		// Filters will be registered here.
+		// Filters will be registered in the next commit.
 	}
 
 	/**
