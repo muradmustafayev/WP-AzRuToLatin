@@ -84,6 +84,32 @@ class Plugin {
 			10,
 			1
 		);
+
+		add_action( 'enqueue_block_editor_assets', array( $this, 'enqueue_block_editor_assets' ) );
+	}
+
+	/**
+	 * Enqueue block editor assets for live slug transliteration.
+	 */
+	public function enqueue_block_editor_assets() {
+		$asset_url = plugins_url( 'assets/js/gutenberg-slug.js', WPMM_AZRUTOLATIN_FILE );
+		$asset_ver = WPMM_AZRUTOLATIN_VERSION;
+
+		wp_enqueue_script(
+			'wpmm-azrutolatin-block-editor',
+			$asset_url,
+			array( 'wp-data', 'wp-editor', 'wp-url' ),
+			$asset_ver,
+			true
+		);
+
+		wp_localize_script(
+			'wpmm-azrutolatin-block-editor',
+			'wpmmAzRuToLatin',
+			array(
+				'slugMap' => $this->transliterator->get_table(),
+			)
+		);
 	}
 
 	/**
